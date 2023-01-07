@@ -1,0 +1,112 @@
+<html lang="en" class="">
+
+<head>
+
+  <style type="text/css" class="INLINE_PEN_STYLESHEET_ID">
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+
+    .tabs {
+      display: flex;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+      padding: 0.55rem;
+      border-radius: 99px;
+      height: 14px;
+      width: 200px;
+      padding-top: 3px;
+    }
+
+    .tabs * {
+      z-index: 2;
+    }
+
+    input[type=radio] {
+      display: none;
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      width: 80px;
+      font-size: 0.6rem;
+      font-weight: 50px;
+      border-radius: 99px;
+      cursor: pointer;
+      transition: color 0.15s ease-in;
+    }
+
+    .notification {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 0.9rem;
+      height: 0.9rem;
+      margin-left: 0.75rem;
+      border-radius: 50%;
+      background-color:#e6eef9;
+      transition: 0.15s ease-in;
+    }
+
+    input[type=radio]:checked+label {
+      color:  rgb(130, 64, 218);
+    }
+
+    input[type=radio]:checked+label>.notification {
+      background-color: rgb(130, 64, 218);
+      color: #fff;
+    }
+
+    input[id=radio-1]:checked~.glider {
+      transform: translateX(0);
+    }
+
+    input[id=radio-2]:checked~.glider {
+      transform: translateX(100%);
+    }
+
+    input[id=radio-3]:checked~.glider {
+      transform: translateX(200%);
+    }
+
+    .glider {
+      position: fixed;
+      display: flex;
+      height: 20px;
+      width: 70px;
+      background-color: #e6eef9;
+      z-index: 1;
+      border-radius: 99px;
+      transition: 0.25s ease-out;
+    }
+
+    @media (max-width: 700px) {
+      .tabs {
+        transform: scale(0.6);
+      }
+    }
+  </style>
+</head>
+
+<body style="background-color: aqua;">
+    <div class="tabs">
+      <input type="radio" id="radio-1" name="tabs" checked="">
+      <label class="tab" for="radio-1">Success<span class=" ">2</span></label>
+      <input type="radio" id="radio-2" name="tabs">
+      <label class="tab" for="radio-2">Fail</label>
+      <input type="radio" id="radio-3" name="tabs">
+      <label class="tab" for="radio-3">Proccessing</label>
+      <span class="glider"></span>
+    </div>
+
+  <script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>

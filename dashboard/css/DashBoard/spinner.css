@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #6b23d5;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spinner .3s linear infinite;
+}
+
+@keyframes spinner {
+    from {}
+
+    to {
+        transform: rotate(360deg);
+    }
+}

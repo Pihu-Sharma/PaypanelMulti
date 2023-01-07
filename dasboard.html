@@ -1,0 +1,434 @@
+<html>
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- <script type="text/javascript" charset="utf8" src=""></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <!-- #region datatables files -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" /> -->
+    <!-- <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script> -->
+    <!-- #endregion -->
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./dashboard/css/DashBoard/core.css">
+    <link rel="stylesheet" type="text/css" href="./dashboard/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./dashboard/css/DashBoard/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="./dashboard/css/DashBoard/spinner.css">
+    <link rel="stylesheet" href="css/pageloader.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+    <style type="text/css">
+        @font-face {
+            font-family: Roboto;
+            src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf");
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+
+    <div id="Preloader" class="animation-container">
+        <div class="square">
+            <div class="line line-x one"></div>
+            <div class="line line-y two"></div>
+            <div class="line line-x three"></div>
+            <div class="line line-y four"></div>
+        </div>
+    </div>
+
+
+    <div class="content" style="display: block;">
+        <div id="navBar">
+
+
+
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="shortcut icon" href="../resources/product-hunt-logo-24.png" type="image/x-icon">
+
+            <!-- ===== CSS ===== -->
+            <link rel="stylesheet" href="./dashboard/css/navBar.css">
+            <!-- ===== BOX ICONS ===== -->
+            <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+
+
+
+            <!--========== HEADER ==========-->
+            <header class="header">
+                <div class="header__container">
+                    <img id="menu-item-993" class="header__img" src="./dashboard/assets/undraw_pic_profile_re_7g2h.svg">
+                    <!-- <i class='bx bx-user' style='color:#4e4c4c'  ></i> -->
+                    <a href="#" class="header__logo">PAYPANEL</a>
+                    <div class="header__search">
+                        <input type="search" placeholder="Search" class="header__input">
+                        <i class="bx bx-search header__icon"></i>
+                    </div>
+                    <div class="header__toggle">
+                        <i class="bx bx-menu" id="header-toggle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!--========== NAV ==========-->
+            <div class="nav" id="navbar">
+                <nav class="nav__container">
+                    <div>
+                        <a href="#" class="nav__link nav__logo">
+                            <i class="bx bxl-product-hunt nav__icon"></i>
+                            <span class="nav__logo-name">PAYPANEL</span>
+                        </a>
+                        <div class="nav__list">
+                            <div class="nav__items">
+
+                                <h3 class="nav__subtitle">Dashboard</h3>
+
+                                <a href="#" class="nav__link active">
+                                    <i class="bx bx-home nav__icon"></i>
+                                    <span class="nav__name">Home</span>
+                                </a>
+
+
+                                <!-- <div class="nav__dropdown">
+                          <a href="#" class="nav__link">
+                              <i class="bx bx-dock-left nav__icon"></i>
+                              <span class="nav__name">Api documentation</span>
+                              <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                          </a>
+
+                          <div class="nav__dropdown-collapse">
+                              <div class="nav__dropdown-content">
+                                  <a href="APIInterigations.html" class="nav__dropdown-item">API Integrations</a>
+                              </div>
+                          </div>
+                      </div> -->
+
+                                <div class="nav__dropdown">
+                                    <a href="#" class="nav__link">
+                                        <i class="bx bxs-receipt nav__icon"></i>
+                                        <span class="nav__name">API Settings</span>
+                                        <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                    </a>
+
+                                    <div class="nav__dropdown-collapse">
+                                        <div class="nav__dropdown-content">
+                                            <a href="APIsettings.html" class="nav__dropdown-item">API's</a>
+                                            <!-- <a href="#" class="nav__dropdown-item">Recharge Report</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nav__dropdown">
+                                    <a href="#" class="nav__link">
+                                        <i class="bx bxs-hotel nav__icon"></i>
+                                        <span class="nav__name">Booking</span>
+                                        <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                    </a>
+                                    <div class="nav__dropdown-collapse">
+                                        <div class="nav__dropdown-content">
+                                            <a href="Apartments.html" class="nav__dropdown-item">Hotels</a>
+                                            <!-- <a href="#" class="nav__dropdown-item">Recharge Report</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nav__dropdown">
+                                    <a href="#" class="nav__link">
+                                        <i class="bx bx-cog" style="color:#3a3939"></i>
+                                        <span class="nav__name">Setting</span>
+                                        <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                    </a>
+
+                                    <div class="nav__dropdown-collapse">
+                                        <div class="nav__dropdown-content">
+                                            <a href="#" class="nav__dropdown-item">Access Token</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="Landing.html" id="nav_logout_Button" class="nav__link nav__logout">
+                        <i class=" bx bx-log-out nav__icon"></i>
+                        <span onclick="Clear()" class="nav__name">Log Out</span>
+                    </a>
+                </nav>
+            </div>
+
+
+
+            <!-- <div class="profile-hover-card hover-effect" id="user_details_card">
+      <div></div>
+  </div> -->
+
+            <script src="./dashboard/js/DashBoard/navBar.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <script>
+                $("#menu-item-993").mouseenter(function () {
+                    $(".hover-effect").show();
+                }).mouseleave(function () {
+                    $(".hover-effect").hide();
+                });
+      // $("#menu-item-993").mouseenter(function () {
+      //     $(".hover-effect").addClass("showit");
+      // }).mouseleave(function () {
+      //     $(".hover-effect").removeClass("showit");
+      // });
+            </script>
+
+
+        </div>
+        <div class="main-container">
+            <div class="xs-pd-20-10 pd-ltr-20">
+                <div class="title mb-4">
+                    <h2 class="h3 mb-0">Recharge Overview</h2>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                        <div class="card-box height-100-p widget-style3">
+                            <div class="d-flex flex-wrap">
+                                <div class="widget-data">
+                                    <div class="weight-700 font-24 text-dark">
+                                        <p id="total">0</p>
+                                    </div>
+                                    <div class="font-14 text-secondary weight-500">
+                                        Total Recharge
+                                    </div>
+                                </div>
+                                <div class="widget-icon">
+                                    <div class="icon" data-color="#00eccf">
+                                        <i class="bx bx-bar-chart" style="color:#fffbfb"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                        <div class="card-box height-100-p widget-style3">
+                            <div class="d-flex flex-wrap">
+                                <div class="widget-data">
+                                    <div class="weight-700 font-24 text-dark">
+                                        <p id="Success">0</p>
+                                    </div>
+                                    <div class="font-14 text-secondary weight-500">
+                                        Success Recharge
+                                    </div>
+                                </div>
+                                <div class="widget-icon">
+                                    <div class="icon" data-color="#ff5b5b">
+                                        <i class="bx bx-line-chart" style="color:#fffbfb"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                        <div class="card-box height-100-p widget-style3">
+                            <div class="d-flex flex-wrap">
+                                <div class="widget-data">
+                                    <div class="weight-700 font-24 text-dark">
+                                        <p id="Fail">0</p>
+                                    </div>
+                                    <div class="font-14 text-secondary weight-500">
+                                        Fail Recharge
+                                    </div>
+                                </div>
+                                <div class="widget-icon">
+                                    <div class="icon">
+                                        <i class="bx bx-line-chart-down" style="color:#fffbfb"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                        <div class="card-box height-100-p widget-style3">
+                            <div class="d-flex flex-wrap">
+                                <div class="widget-data">
+                                    <div class="weight-700 font-24 text-dark">
+                                        <p id="Proccessing">0</p>
+                                    </div>
+                                    <div class="font-14 text-secondary weight-500">Proccessing Recharge</div>
+                                </div>
+                                <div class="widget-icon">
+                                    <div class="icon">
+                                        <i class="bx bx-bullseye" style="color:#ffffff"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-box  mb-4">
+                    <div class="h5 pd-20 mb-0">Live Recharge</div>
+                    <table id="tableData" class="table table-hover responsive nowrap">
+                        <!-- <table id="tableData" class="data-table table nowrap"> -->
+                       
+
+                    </table>
+                </div>
+
+                <div class="title pb-20 pt-20">
+                    <h2 class="h3 mb-0">Quick Start</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <a href="#" class="card-box cardBoxHidden d-block mx-auto pd-20 text-secondary">
+                            <div class="img mb-4">
+                                <img class="img-fluid" src="./dashboard/assets/undraw_reminder_re_fe15.svg" alt="">
+                            </div>
+                            <div class="content" style="display: block;">
+                                <h3 class="h4">WhatsApp Message Api</h3>
+                                <p class="img-fluid">
+                                    We provid Fast Message Sending Api At Low Cost
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="#" class="card-box cardBoxHidden d-block mx-auto pd-20 text-secondary">
+                            <div class="img mb-4">
+                                <img class="img-fluid" src="./dashboard/assets/undraw_mobile_analytics_72sr.svg" alt="">
+                            </div>
+                            <div class="content" style="display: block;">
+                                <h3 class="h4">Fastest Sever By PayPanel</h3>
+                                <p class="img-fluid">
+                                    We provide Fastest Server for Good exprience
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="#" class="card-box cardBoxHidden d-block mx-auto pd-20 text-secondary">
+                            <div class="img mb-4">
+                                <img class="img-fluid" src="./dashboard/assets/undraw_team_up_re_84ok.svg" alt="">
+                            </div>
+                            <div class="content" style="display: block;">
+                                <h3 class="h4">Fastest Sever By PayPanel</h3>
+                                <p class="img-fluid">
+                                    We provide Fastest Server for Good exprience
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="#" class="card-box cardBoxHidden d-block mx-auto pd-20 text-secondary">
+                            <div class="img mb-4">
+                                <img class="img-fluid" src="./dashboard/assets/undraw_fast_loading_re_8oi3.svg" alt="">
+                            </div>
+                            <div class="content" style="display: block;">
+                                <h3 class="h4">Fastest Sever By PayPanel</h3>
+                                <p class="img-fluid">
+                                    We provide Fastest Server for Good exprience
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <footer>
+                <div class="footer-div">
+                    <div class="footer-text-div">
+                        <h4><span>Pampered by PayPanel © 2020 to</span>
+                            <script>document.write(new Date().getFullYear())</script>2022<a href="#">&nbsp;</a>
+                            | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a> |<a href="#"> Refund
+                                Policy</a>
+                        </h4>
+                    </div>
+                </div>
+            </footer>
+        </center>
+
+    </div>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/RechargeData.js"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css"> -->
+    <!-- <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script> -->
+
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+        style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
+        <defs id="SvgjsDefs1002"></defs>
+        <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+        <path id="SvgjsPath1004" d="M0 0 "></path>
+    </svg>
+    <script>
+        var returnedSuggestion = ''
+        let editor, doc, cursor, line, pos
+        document.addEventListener("keydown", (event) => {
+            setTimeout(() => {
+                editor = event.target.closest('.CodeMirror');
+                if (editor) {
+                    doc = editor.CodeMirror.getDoc()
+                    cursor = doc.getCursor()
+                    line = doc.getLine(cursor.line)
+                    pos = { line: cursor.line, ch: line.length }
+                    if (event.key == "Enter") {
+                        var query = doc.getRange({ line: Math.max(0, cursor.line - 10), ch: 0 }, { line: cursor.line, ch: 0 })
+                        window.postMessage({ source: 'getSuggestion', payload: { data: query } })
+                        //displayGrey(query)
+                    }
+                    else if (event.key == "ArrowRight") {
+                        acceptTab(returnedSuggestion)
+                    }
+                }
+            }, 0)
+        })
+
+        function acceptTab(text) {
+            if (suggestionDisplayed) {
+                doc.replaceRange(text, pos)
+                suggestionDisplayed = false
+            }
+        }
+        function displayGrey(text) {
+            var element = document.createElement('span')
+            element.innerText = text
+            element.style = 'color:grey'
+            var lineIndex = pos.line;
+            editor.getElementsByClassName('CodeMirror-line')[lineIndex].appendChild(element)
+            suggestionDisplayed = true
+        }
+        window.addEventListener('message', (event) => {
+            if (event.source !== window) return
+            if (event.data.source == 'return') {
+                returnedSuggestion = event.data.payload.data
+                displayGrey(event.data.payload.data)
+            }
+        })
+    </script>
+</body>
+
+</html>
